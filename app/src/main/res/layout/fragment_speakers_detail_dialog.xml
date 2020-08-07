@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.speakers.SpeakersDetailDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/toolbarConf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:id="@+id/tvDetailSpeakerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Nombre del expositor"
+                    android:textSize="@dimen/schedule_subtitle_text"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/tvDetailSpeakerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Job title"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/tvDetailSpeakerJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Job"
+                    android:textSize="@dimen/desc_text_size"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_margin="5dp"/>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_twitter"/>
+                <TextView
+                    android:id="@+id/tvDetailSpeakerDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Descripción del expositor"
+                    android:textSize="@dimen/desc_text_size"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_margin="5dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
