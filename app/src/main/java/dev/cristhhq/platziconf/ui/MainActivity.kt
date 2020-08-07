@@ -1,7 +1,8 @@
-package dev.cristhhq.platziconf
+package dev.cristhhq.platziconf.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import dev.cristhhq.platziconf.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

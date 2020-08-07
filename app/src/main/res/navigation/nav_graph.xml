@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="dev.cristhhq.platziconf.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navScheduleFragment"
+        android:name="dev.cristhhq.platziconf.ui.schedule.ScheduleFragment"
+        android:label="@string/schedule"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_scheduleDetailDialogFragment"
+            app:destination="@id/scheduleDetailDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navLocationFragment"
+        android:name="dev.cristhhq.platziconf.ui.location.LocationFragment"
+        android:label="@string/location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_locationDetailDialogFragment"
+            app:destination="@id/locationDetailDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSpeakersFragment"
+        android:name="dev.cristhhq.platziconf.ui.speakers.SpeakersFragment"
+        android:label="@string/speakers"
+        tools:layout="@layout/fragment_speakers" >
+        <action
+            android:id="@+id/action_speakersFragment_to_speakersDetailDialogFragment"
+            app:destination="@id/speakersDetailDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/locationDetailDialogFragment"
+        android:name="dev.cristhhq.platziconf.ui.location.LocationDetailDialogFragment"
+        android:label="fragment_location_detail_dialog"
+        tools:layout="@layout/fragment_location_detail_dialog" />
+    <dialog
+        android:id="@+id/speakersDetailDialogFragment"
+        android:name="dev.cristhhq.platziconf.ui.speakers.SpeakersDetailDialogFragment"
+        android:label="fragment_speakers_detail_dialog"
+        tools:layout="@layout/fragment_speakers_detail_dialog" />
+    <dialog
+        android:id="@+id/scheduleDetailDialogFragment"
+        android:name="dev.cristhhq.platziconf.ui.schedule.ScheduleDetailDialogFragment"
+        android:label="fragment_schedule_detail_dialog"
+        tools:layout="@layout/fragment_schedule_detail_dialog" />
+</navigation>
