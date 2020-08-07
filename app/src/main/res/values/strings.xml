@@ -21,4 +21,9 @@ Porque en esta versión todo girará al rededor de la pregunta: ¿Qué habilidad
     <string name="address">Dirección</string>
     <string name="phone">Teléfono</string>
     <string name="link">Sitio web</string>
+
+    <string name="home">Inicio</string>
+    <string name="schedule">Cronograma</string>
+    <string name="speakers">Expositores</string>
+    <string name="location">Mapa</string>
 </resources>
