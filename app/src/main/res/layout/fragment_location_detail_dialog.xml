@@ -3,12 +3,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.location.LocationDetailDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/toolbarLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:src="@drawable/platzi_conf_2"
+                    android:scaleType="centerCrop"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="4dp"
+                    android:layout_margin="@dimen/card_margin">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/conf_place"
+                            android:textSize="@dimen/schedule_title_text"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_pin"
+                            android:text="@string/address"
+                            android:textSize="@dimen/desc_text_size"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawablePadding="5dp"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_marginBottom="@dimen/separator_margin"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:text="@string/phone"
+                            android:textSize="@dimen/desc_text_size"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawablePadding="5dp"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_marginBottom="@dimen/separator_margin"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_link"
+                            android:text="@string/link"
+                            android:textSize="@dimen/desc_text_size"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawablePadding="5dp"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_marginBottom="@dimen/separator_margin"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 
 </FrameLayout>
