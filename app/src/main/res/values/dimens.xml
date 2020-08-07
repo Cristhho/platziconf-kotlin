@@ -7,7 +7,10 @@
     <dimen name="home_title_margin">10dp</dimen>
     <dimen name="separator_margin">10dp</dimen>
     <dimen name="card_margin">15dp</dimen>
+    <dimen name="schedule_section_margin">10dp</dimen>
 
     <dimen name="title_text_size">20sp</dimen>
     <dimen name="desc_text_size">15sp</dimen>
+    <dimen name="schedule_title_text">30sp</dimen>
+    <dimen name="schedule_subtitle_text">20sp</dimen>
 </resources>
