@@ -34,7 +34,6 @@ class SpeakersFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(SpeakersViewModel::class.java)
-        viewModel.refresh()
 
         speakersAdapter = SpeakersAdapter(object: SpeakersAdapter.SpeakerListener{
             override fun onSpeakerClicked(speaker: Speaker, position: Int) {
@@ -47,6 +46,7 @@ class SpeakersFragment : Fragment() {
             adapter = speakersAdapter
         }
         observeViewModel()
+        viewModel.refresh()
     }
 
     private fun observeViewModel() {

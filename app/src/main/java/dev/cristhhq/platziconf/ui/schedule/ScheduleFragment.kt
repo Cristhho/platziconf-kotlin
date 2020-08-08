@@ -31,7 +31,6 @@ class ScheduleFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
-        viewModel.refresh()
 
         schedulerAdapter = ScheduleAdapter(object: ScheduleAdapter.ScheduleListener{
             override fun onConferenceClicked(conference: Conference, position: Int) {
@@ -44,6 +43,7 @@ class ScheduleFragment : Fragment() {
             adapter = schedulerAdapter
         }
         observeViewModel()
+        viewModel.refresh()
     }
 
     private fun observeViewModel() {
