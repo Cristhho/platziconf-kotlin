@@ -34,6 +34,7 @@ class SpeakersAdapter(val speakerListener: SpeakerListener): RecyclerView.Adapte
         Glide.with(holder.itemView.context)
             .load(speaker.image)
             .apply(RequestOptions.circleCropTransform())
+            .error(R.mipmap.ic_launcher)
             .into(holder.speakerImage)
 
         holder.itemView.setOnClickListener {

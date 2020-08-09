@@ -1,6 +1,8 @@
 package dev.cristhhq.platziconf.model
 
-class Speaker {
+import java.io.Serializable
+
+class Speaker: Serializable {
     var name = ""
     var jobTitle = ""
     var workplace = ""
