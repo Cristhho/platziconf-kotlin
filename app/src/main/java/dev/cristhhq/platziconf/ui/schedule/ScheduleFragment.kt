@@ -9,6 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.cristhhq.platziconf.R
 import dev.cristhhq.platziconf.model.Conference
@@ -42,6 +43,7 @@ class ScheduleFragment : Fragment() {
             layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
             adapter = schedulerAdapter
         }
+        rvSchedule.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
         observeViewModel()
         viewModel.refresh()
     }

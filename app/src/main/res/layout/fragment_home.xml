@@ -23,6 +23,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:paddingTop="@dimen/card_padding"
+                    android:paddingBottom="@dimen/card_padding"
                     android:background="@drawable/shape_paragraph">
                     <ImageView
                         android:layout_width="match_parent"
@@ -69,6 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:paddingBottom="@dimen/card_padding"
                     android:background="@drawable/shape_paragraph">
                     <ImageView
                         android:layout_width="match_parent"
@@ -116,6 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:paddingBottom="@dimen/card_padding"
                     android:background="@drawable/shape_paragraph">
                     <ImageView
                         android:layout_width="match_parent"
