@@ -26,4 +26,6 @@ Porque en esta versión todo girará al rededor de la pregunta: ¿Qué habilidad
     <string name="schedule">Cronograma</string>
     <string name="speakers">Expositores</string>
     <string name="location">Mapa</string>
+
+    <string name="maps_api_key">AIzaSyAdxmd6TstQnlJEBNBGt2SJLf3fzjn_2Po</string>
 </resources>
